@@ -1,0 +1,6 @@
+flask
+twilio
+python-dotenv
+requests
+openai-whisper @ git+https://github.com/openai/whisper.git
+TTS
