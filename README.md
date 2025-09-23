@@ -1,44 +1,49 @@
-# AI-CALLING-VOICE-AGENT
-This project is a fully open-source, cost-effective voice AI assistant designed to handle inbound phone calls using a toll-free number. It transcribes speech, understands the caller’s intent using a locally hosted Large Language Model (LLM), and responds naturally using text-to-speech — all without relying on expensive APIs or cloud services. 
-# Real-Time Voice Agent AI
+# 🧠 Voice Assistant AI Agent
 
-A real-time voice assistant using Flask, Twilio, websockets, speech-to-text, LLM, and gTTS.
+A powerful voice-based AI assistant that receives phone calls, transcribes audio, understands queries using LLMs, and responds in real-time — all with a privacy-first architecture.
 
-## Features
+---
 
-- Receives calls via Twilio
-- Real-time audio streaming and transcription
-- AI-powered responses (LLM)
-- Text-to-speech with gTTS
+## 📌 Architecture
 
-## Setup
+Designed with modular components for flexibility and data privacy.
 
-1. Clone the repo:
-   ```
-   git clone https://github.com/yourusername/voice-agent.git
-   cd voice-agent
-   ```
+![Voice Assistant Architecture](https://github.com/user-attachments/assets/d307e772-5c3d-4b7f-a18f-aa7896b452c1)
 
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+📝 Excalidraw Link: [View Full Architecture](https://excalidraw.com/#json=NxMM5_z7aCOxb_mO7ZzsH,4dlhaExCo_Rq6Olo0zPn4w)
 
-3. Add a `.env` file with your Twilio credentials and agent prompt.
+---
+## 🚀 Getting Started
 
-4. Run the app:
-   ```
-   python app.py
-   ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Stellarmind-AI/voice-assistant-ai-agent.git
+cd voice-assistant-ai-agent
+```
 
-## File Structure
 
-- `app.py` — Main server and websocket logic
-- `stt_handler.py` — Speech-to-text
-- `llm_handler.py` — LLM query logic
-- `tts_handler.py` — Text-to-speech (gTTS)
-- `requirements.txt` — Python dependencies
+### 2. Create a Virtual Environment
+```bash
+python -m venv venv
+venv\Scripts\activate
 
-## License
+```
+On macOS/Linux:
 
-MIT
+```bash
+python3 -m venv venv
+source venv/bin/activate
+
+```
+
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+
+### 4. Run the FastAPI Server
+```bash
+uvicorn app:app --reload
+```
