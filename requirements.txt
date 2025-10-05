@@ -1,0 +1,81 @@
+# Production Voice Assistant with Emotional Intelligence - Requirements
+
+## Python Version
+- Python 3.9+
+
+## Core Dependencies
+
+### Web Framework & Server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+websockets==12.0
+
+### AI & ML
+openai==1.3.5
+groq==0.4.1
+whisper==1.1.10  # OpenAI Whisper for STT
+torch==2.1.0  # PyTorch for Whisper
+torchaudio==2.1.0
+
+### Vector Database & Embeddings
+chromadb==0.4.18
+sentence-transformers==2.2.2  # For ChromaDB embeddings
+
+### Speech Recognition (STT)
+deepgram-sdk==3.0.0  # Primary STT
+webrtcvad==2.0.10  # Voice Activity Detection
+librosa==0.10.1  # Audio processing
+soundfile==0.12.1  # Audio file I/O
+numpy==1.24.3
+
+### Text-to-Speech (TTS)
+edge-tts==6.1.9
+aiofiles==23.2.1  # Async file operations for TTS cache
+
+### Google Sheets Integration (Booking System)
+google-api-python-client==2.108.0
+google-auth==2.25.2
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+
+### Email Notifications
+python-dotenv==1.0.0  # For environment variables
+aiosmtplib==3.0.1  # Async SMTP (optional, using smtplib built-in)
+
+### Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+### HTTP Client
+aiohttp==3.9.1
+requests==2.31.0
+
+### Data Processing
+pydantic==2.5.0
+dataclasses-json==0.6.3
+
+### Testing & Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+## Optional Dependencies
+
+### Advanced VAD (Silero)
+# Silero VAD is loaded via torch.hub - no separate package needed
+# But requires torch to be installed (already listed above)
+
+### Audio Format Conversion
+pydub==0.25.1  # Optional, for advanced audio processing
+
+### Performance Monitoring
+psutil==5.9.6  # For system resource monitoring
+
+## System Requirements
+
+### Audio Processing
+- FFmpeg (system package) - Required for librosa and audio format conversion
+  - Ubuntu/Debian: `sudo apt-get install ffmpeg`
+  - macOS: `brew install ffmpeg`
+  - Windows: Download from https://ffmpeg.org/
